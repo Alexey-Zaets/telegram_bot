@@ -1,14 +1,14 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import apiai, json
 
-updater = Updater(token='642867609:AAHnXTPHlKrayOnZZB2C4NGmtiTQlgaCmVI')
+updater = Updater(token='')
 dispatcher = updater.dispatcher
 
 def startCommand(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Привет, давай пообщаемся?')
 
 def textMessage(bot, update):
-    request = apiai.ApiAI('5f96ead0316843309201998a2c7f1983').text_request()
+    request = apiai.ApiAI('').text_request()
     request.lang = 'ru'
     request.session_id = 'Spanch_Bob_Bot'
     request.query = update.message.text
